@@ -1,0 +1,8 @@
+# Full ML/DS foundations extension. This extends the CPU framework track.
+-r requirements-frameworks-cpu.txt
+pandas==3.1.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+fastapi==0.141.1
+httpx==0.28.1
+uvicorn==0.52.1

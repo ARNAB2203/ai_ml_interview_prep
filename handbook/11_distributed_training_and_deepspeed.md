@@ -145,5 +145,4 @@ Strong answer sequence:
 | PyTorch / Hugging Face | `pytorch_hf_peft.py` | CPU framework requirements |
 | JAX | `jax_training_patterns.py` | CPU framework requirements |
 
-Return to [the overview and study plan](00_overview_and_study_plan.md) and use
-the revised stack coverage table when scheduling practice.
+Continue with [Module 12: Data, Math, and Classical ML Foundations](12_data_math_and_classical_ml_foundations.md).

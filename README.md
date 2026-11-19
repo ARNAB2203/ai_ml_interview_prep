@@ -55,6 +55,19 @@ paths are opt-in. See Modules 08–11 before installing the corresponding
 optional dependency: the code defaults to local test doubles, an offline tiny
 model, or configuration validation and never requires a key or GPU by default.
 
+### ML/DS foundations extension
+
+The DOCX-informed foundations track adds data contracts, NumPy/Pandas,
+classical ML, deep-learning architecture reasoning, hybrid retrieval/index
+operations, MLOps, FastAPI serving, drift monitoring, and system equations.
+
+```bash
+source .framework-venv/bin/activate
+python -m pip install -r examples/requirements-ml-ds.txt
+python examples/ml_ds_demos/run_ml_ds_demos.py
+python -m unittest discover -s examples/ml_ds_demos/tests -v
+```
+
 ### Google Colab setup
 
 Create a new Colab notebook and run these cells in order. The repository URL
@@ -83,6 +96,8 @@ open [notebooks/00_colab_runner.ipynb](notebooks/00_colab_runner.ipynb) in
 Colab after cloning the repository. The stack-extension notebooks are
 [01_frameworks_colab.ipynb](notebooks/01_frameworks_colab.ipynb) and
 [02_model_engineering_colab.ipynb](notebooks/02_model_engineering_colab.ipynb).
+The data/ML foundation companion is
+[03_ml_ds_foundations_colab.ipynb](notebooks/03_ml_ds_foundations_colab.ipynb).
 
 ## Handbook map
 
@@ -97,6 +112,9 @@ Colab after cloning the repository. The stack-extension notebooks are
 | Advanced | LangChain, LlamaIndex, OpenAI/Anthropic adapter boundaries, and FastAPI integration | `examples/framework_demos/provider_gateway.py` |
 | Advanced | LangGraph, MCP, AutoGen, CrewAI, and Google ADK decision patterns | `examples/framework_demos/langgraph_approval_graph.py` |
 | Advanced | PyTorch, JAX, Hugging Face, PEFT/LoRA/QLoRA, and DeepSpeed | `examples/framework_demos/pytorch_hf_peft.py` |
+| Beginner–Advanced | Data contracts, classical ML, statistics, and clustering | `examples/ml_ds_demos/data_classical_ml.py` |
+| Intermediate–Advanced | Deep learning, attention, TF-IDF, and hybrid retrieval | `examples/ml_ds_demos/deep_learning_nlp_foundations.py` |
+| Advanced–Master | MLOps, FastAPI serving, drift, promotion, and responsible AI | `examples/ml_ds_demos/mlops_lifecycle.py` |
 
 ## Repository layout
 
