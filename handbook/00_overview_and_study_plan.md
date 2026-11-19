@@ -33,6 +33,9 @@ interview is therefore likely to probe the following capabilities together.
 | Framework/API fluency | Provider adapters, LangChain, LlamaIndex, FastAPI integration | 08 |
 | Agent orchestration | LangGraph, MCP, AutoGen, CrewAI, Google ADK decision patterns | 09 |
 | Model engineering | PyTorch, JAX, Hugging Face, PEFT/LoRA/QLoRA, DeepSpeed | 10, 11 |
+| Data/ML foundations | Data contracts, statistics, classical ML, leakage-safe evaluation | 12 |
+| Deep learning/retrieval systems | Architectures, attention, hybrid ranking, vector-index lifecycle | 13 |
+| MLOps/LLMOps | Registry, serving, drift, observability, responsible AI, cloud controls | 14, 15 |
 
 ## 2. How to use this handbook
 
@@ -121,7 +124,13 @@ when retrieval is empty, and how the change is released safely.
 | `framework_demos/pytorch_hf_peft.py` | CPU PyTorch, local Hugging Face model, and LoRA step | `python examples/framework_demos/pytorch_hf_peft.py` |
 | `framework_demos/jax_training_patterns.py` | JAX PRNG, `grad`, `jit`, and `vmap` | `python examples/framework_demos/jax_training_patterns.py` |
 | `framework_demos/deepspeed_zero_config.py` | ZeRO configuration validation and memory planning | `python examples/framework_demos/deepspeed_zero_config.py` |
+| `ml_ds_demos/data_classical_ml.py` | Data contract, group-safe ML, clustering, calibration, math | `python examples/ml_ds_demos/data_classical_ml.py` |
+| `ml_ds_demos/deep_learning_nlp_foundations.py` | Autograd, architecture shapes, attention masks, TF-IDF | `python examples/ml_ds_demos/deep_learning_nlp_foundations.py` |
+| `ml_ds_demos/hybrid_retrieval_operations.py` | Hybrid retrieval, RRF, ranking metrics, deletion, capacity | `python examples/ml_ds_demos/hybrid_retrieval_operations.py` |
+| `ml_ds_demos/mlops_lifecycle.py` | Registry promotion, drift, trace redaction | `python examples/ml_ds_demos/mlops_lifecycle.py` |
+| `ml_ds_demos/model_serving_api.py` | Health/readiness/predict/metrics API contract | `python examples/ml_ds_demos/model_serving_api.py` |
 
 The first seven modules are the core JD-aligned track. Modules 08–11 are the
-stack-extension track requested for framework and model-engineering interviews.
+framework/model-engineering extension; Modules 12–15 add ML/DS and production
+AI-system breadth.
 Continue with [Module 01: Foundations, Python, and ML](01_foundations_python_and_ml.md).
