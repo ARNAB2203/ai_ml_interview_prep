@@ -118,3 +118,6 @@ After each answer, score 0–2.
 | Trade-offs | One asserted solution | Lists alternatives | Makes and defends a context-specific choice |
 
 A senior target is 8/10 or better under the selected time limit.
+
+For framework-specific drills, continue with [Module 08: Application Frameworks
+and Provider APIs](08_application_frameworks_and_provider_apis.md).

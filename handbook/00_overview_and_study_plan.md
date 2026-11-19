@@ -30,6 +30,9 @@ interview is therefore likely to probe the following capabilities together.
 | Packaging and A2A/MCP-style integration | Manifest validation, compatibility, sandboxing, versioning | 04, 05 |
 | Evaluation practices | Offline test sets, gates, regressions, human review and telemetry | 03, 05 |
 | Docker/AWS runtime patterns | Immutable artifacts, health checks, secrets, rollout, observability | 05, 06 |
+| Framework/API fluency | Provider adapters, LangChain, LlamaIndex, FastAPI integration | 08 |
+| Agent orchestration | LangGraph, MCP, AutoGen, CrewAI, Google ADK decision patterns | 09 |
+| Model engineering | PyTorch, JAX, Hugging Face, PEFT/LoRA/QLoRA, DeepSpeed | 10, 11 |
 
 ## 2. How to use this handbook
 
@@ -44,11 +47,12 @@ concern. This handbook uses the same rhythm.
 5. Finish with the **production trade-off**; this is what differentiates a
    senior answer from a tutorial answer.
 
-> **Warning — deterministic examples are intentional.** The examples use
-> local, rule-based models and a hashing embedder so a reviewer can reproduce
-> outputs without secrets, a GPU, or a network connection. In production,
-> replace only the adapter boundary—not authorization, evaluation, or
-> observability controls—with a managed model or vector service.
+> **Warning — deterministic defaults are intentional.** The default examples
+> use local, rule-based models, mock embeddings, or tiny local models so a
+> reviewer can reproduce outputs without secrets, a GPU, or a network
+> connection. Clearly labelled live-provider and accelerator paths are opt-in.
+> In production, replace only the adapter boundary—not authorization,
+> evaluation, or observability controls—with a managed model or vector service.
 
 ## 3. Six-week progression: Beginner to Master
 
@@ -110,5 +114,14 @@ when retrieval is empty, and how the change is released safely.
 | `rag_evaluation.py` | Retrieval, citations, offline quality gates | `python examples/rag_evaluation.py` |
 | `agent_platform_api.py` | FastAPI CRUD, schemas, deployment transition, tenant isolation | `python examples/agent_platform_api.py` |
 | `manifest_validator.py` | ZIP manifest safety and compatibility checks | `python examples/manifest_validator.py` |
+| `framework_demos/provider_gateway.py` | OpenAI/Anthropic adapter boundary, fake provider, structured tool calls | `python examples/framework_demos/provider_gateway.py` |
+| `framework_demos/langchain_llamaindex_rag.py` | LCEL composition and LlamaIndex tenant metadata filters | `python examples/framework_demos/langchain_llamaindex_rag.py` |
+| `framework_demos/langgraph_approval_graph.py` | Stateful approval routing | `python examples/framework_demos/langgraph_approval_graph.py` |
+| `framework_demos/mcp_knowledge_server.py` | Real local FastMCP discovery and narrow tools | `python examples/framework_demos/mcp_knowledge_server.py` |
+| `framework_demos/pytorch_hf_peft.py` | CPU PyTorch, local Hugging Face model, and LoRA step | `python examples/framework_demos/pytorch_hf_peft.py` |
+| `framework_demos/jax_training_patterns.py` | JAX PRNG, `grad`, `jit`, and `vmap` | `python examples/framework_demos/jax_training_patterns.py` |
+| `framework_demos/deepspeed_zero_config.py` | ZeRO configuration validation and memory planning | `python examples/framework_demos/deepspeed_zero_config.py` |
 
+The first seven modules are the core JD-aligned track. Modules 08–11 are the
+stack-extension track requested for framework and model-engineering interviews.
 Continue with [Module 01: Foundations, Python, and ML](01_foundations_python_and_ml.md).
